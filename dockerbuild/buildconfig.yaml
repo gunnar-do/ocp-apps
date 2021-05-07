@@ -20,5 +20,8 @@ spec:
   strategy:
     dockerStrategy:
       dockerfilePath: Dockerfile
+      from:
+        kind: ImageStreamTag
+        name: payara-base:latest
     type: Docker
   successfulBuildsHistoryLimit: 5
