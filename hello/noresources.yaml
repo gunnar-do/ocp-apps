@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: noresources
+  name: noresources
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: noresources
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: noresources
+    spec:
+      containers:
+      - image: quay.io/do-gunnar/versioned-hello:1.0
+        name: versioned-hello
+        resources:
+status: {}
