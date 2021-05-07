@@ -1,0 +1,1 @@
+FROM airhacks/payara:latest
