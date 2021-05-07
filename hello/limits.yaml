@@ -5,8 +5,8 @@ metadata:
 spec:
   limits:
   - max:
-      cpu: "4"
-      memory: 2Gi
+      cpu: "2"
+      memory: 1Gi
     default:
       cpu: "200m"
       memory: 200Mi
@@ -16,8 +16,8 @@ spec:
     type: Container
   requests:
   - max:
-      cpu: "4"
-      memory: 2Gi
+      cpu: "2"
+      memory: 1Gi
     default:
       cpu: "200m"
       memory: 200Mi
