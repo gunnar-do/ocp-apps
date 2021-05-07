@@ -20,5 +20,11 @@ spec:
       containers:
       - image: quay.io/do-gunnar/versioned-hello:1.0
         name: versioned-hello
-        resources: {}
+        resources:
+          requests:
+            cpu: 500m
+            memory: 100Mi
+          limits:
+            cpu: 1000m
+            memory: 500Mi
 status: {}
