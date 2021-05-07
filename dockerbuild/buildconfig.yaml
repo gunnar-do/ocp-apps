@@ -1,0 +1,24 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: payara
+spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: null
+  output:
+   to:
+     kind: ImageStreamTag
+     name: payara:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    git:
+      uri: https://github.com/gunnar-do/ocp-apps.git
+    contextDir: dockerbuild
+    type: Git
+  strategy:
+    dockerStrategy:
+      dockerfilePath: Dockerfile
+    type: Docker
+  successfulBuildsHistoryLimit: 5
